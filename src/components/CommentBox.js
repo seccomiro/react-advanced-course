@@ -6,11 +6,11 @@ import requireAuth from 'components/requireAuth';
 class CommentBox extends React.Component {
   state = { comment: '' };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ comment: e.target.value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     this.props.saveComment(this.state.comment);
     this.setState({ comment: '' });
